@@ -1,5 +1,4 @@
 @font-face {
     font-family: 'HelveticaNeue';
     src: local('HelveticaNeue'), url(./fonts/HelveticaNeue.woff) format('woff');
-    /* src: local('HelveticaNeue'), url(./fonts/HelveticaNeue-Bold.woff) format('woff'); */
 }

@@ -11,7 +11,7 @@ import {
     LoginForm,
     LoginInput,
 } from '../styles';
-import { TLoginForm } from '../types';
+import { TLoginForm, TServerResponse } from '../types';
 
 const LoginPage = () => {
     const navigate = useNavigate();
@@ -31,7 +31,7 @@ const LoginPage = () => {
     const [isBtnDisabled, setIsBtnDisabled] = React.useState(false);
 
 
-    const [serverResponse, setServerResponse] = React.useState<any>();
+    const [serverResponse, setServerResponse] = React.useState<TServerResponse>();
 
 
     const onSubmit = async (data: TLoginForm) => {
@@ -48,7 +48,7 @@ const LoginPage = () => {
     return (
         <div>
             <Header />
-            {serverResponse !== undefined ? <ServerError login={serverResponse.message} /> : null }
+            {serverResponse !== undefined ? <ServerError errorMessage={serverResponse.message} /> : null }
             <LoginForm onSubmit={handleSubmit(onSubmit)}>
                 <Label htmlFor="login">Логин</Label>
                 <LoginInput

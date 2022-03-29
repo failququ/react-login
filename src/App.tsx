@@ -13,10 +13,6 @@ function App() {
         </Routes>
     </div>
 
-
-    
-
-
   );
 }
 
